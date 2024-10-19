@@ -5,7 +5,9 @@ class Ball {
     this.radius = 10;
     this.hue = 0;
     this.done = false;
-    this.body = Bodies.circle(this.x, this.y, this.radius, {restitution: 0.6});
+    this.body = Bodies.circle(this.x, this.y, this.radius, {
+      restitution: 0.6,
+    });
     this.velocity = Vector.create(random(-1, 1), random(-1, 1));
     Body.setVelocity(this.body, this.velocity);
     Composite.add(engine.world, this.body);

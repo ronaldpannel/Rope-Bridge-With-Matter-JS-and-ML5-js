@@ -16,7 +16,8 @@ class Bridge {
     this.chains = Composite.create();
     Composite.add(this.chains, this.bodies);
     let options = {
-      stiffness: 0.9,
+      stiffness: 1,
+      damp0ng: 0.1,
       length: this.length,
     };
     Composites.chain(this.chains, 0, 0, 0, 0, options);
